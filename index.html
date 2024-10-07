@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página interactiva con GIFs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+            margin: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        img {
+            max-width: 300px;
+            margin-top: 20px;
+        }
+        #gif-container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Página interactiva con GIFs</h1>
+
+    <button onclick="mostrarGif('gif1')">Mostrar GIF 1</button>
+    <button onclick="mostrarGif('gif2')">Mostrar GIF 2</button>
+    <button onclick="mostrarGif('gif3')">Mostrar GIF 3</button>
+
+    <div id="gif-container">
+        <img id="gif" src="" alt="Haz clic en un botón para ver un GIF">
+    </div>
+
+    <script>
+        function mostrarGif(gif) {
+            const gifs = {
+                'gif1': 'https://media.giphy.com/media/l0HUqsz2jdQYElRm0/giphy.gif',
+                'gif2': 'https://media.giphy.com/media/3o6Zt8MgUuvSbkZYWc/giphy.gif',
+                'gif3': 'https://media.giphy.com/media/13HgwGsXF0aiGY/giphy.gif'
+            };
+            document.getElementById('gif').src = gifs[gif];
+        }
+    </script>
+
+</body>
+</html>
